@@ -5,3 +5,4 @@ As soon as user changes or enters text for rows and columns, below that a dynami
 each having default width and height
 Please note : <table><thead><tr><td> is NOT to be used for this problem
 https://tympanus.net/Development/DraggableDualViewSlideshow/
+https://www.w3schools.com/howto/howto_js_slideshow.asp
