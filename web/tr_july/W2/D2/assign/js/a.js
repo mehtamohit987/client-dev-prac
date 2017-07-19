@@ -15,14 +15,13 @@
       }
       x[n-1].style.display = "block";  
     }
-    var initalXPos, initialYPos, curYPos, curXPos, curDown=false;
-    function move(e){ 
+    var initalXPos, curDown=false;
+    function move(e){
       if(curDown){
-        if(!initalXPos || !initialYPos) {var initial = $(e.target).offset(); initalXPos=initial.left; initalYPos=initial.y;}
-        curXPos =
-        console.log(currXPos, ' : ', e.target.width);
-        if((curXPos - e.pageX)>=e.target.width){debugger;next();}
-        else if((e.pageX - curXPos)>=e.target.width){debugger;next();}
+        if(!initalXPos) {initalXPos= e.clientX;}
+        console.log( String(e.clientX - initalXPos) + ' / ' + (e.target.width/2) );
+        if((e.clientX - initalXPos)>=(e.target.width/2)){debugger;prev();}
+        else if ((initalXPos - e.clientX)>=(e.target.width/2)){debugger;next();}
       }
     } 
     function down(e){
