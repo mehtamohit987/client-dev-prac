@@ -6,3 +6,5 @@ each having default width and height
 Please note : <table><thead><tr><td> is NOT to be used for this problem
 https://tympanus.net/Development/DraggableDualViewSlideshow/
 https://www.w3schools.com/howto/howto_js_slideshow.asp
+https://codepen.io/JTParrett/pen/rkofB
+https://codepen.io/techslides/pen/zowLd
