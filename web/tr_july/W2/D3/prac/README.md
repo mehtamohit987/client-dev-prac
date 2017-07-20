@@ -14,5 +14,5 @@ Create a very simple TODO App:
     b) For build(no mininization or uglify)
     c) For production(minimized files, compression etc...)
 | | | |
-a) PartialRight, Curry, Reduce(coll, fn(acc, val, key), default_acc)),setSettings(key, value) <keys: a/b/c> = reducer non-mutate{} Object.assign, Promise imp
+a) PartialRight, Curry, Reduce(coll, fn(acc, val, key), default_acc)), setSettings(key, value) <keys: a/b/c> = reducer non-mutate{} Object.assign, Promise imp
 b) Game - cross br
