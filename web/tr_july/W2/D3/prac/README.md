@@ -16,4 +16,4 @@ Create a very simple TODO App:
 | | | |
 a) PartialRight, Curry, Reduce(coll, fn(acc, val, key), default_acc)), setSettings(key, value) <keys: a/b/c> = reducer non-mutate{} Object.assign, Promise imp
 b) Game - cross br
-jasmine test, async, array impl, getter-setter impl
+jasmine test, async test, array impl, getter-setter impl
