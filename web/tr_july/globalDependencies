@@ -1,0 +1,1 @@
+npm install -g connect serve-static webpack webpack-dev-server babel-core babel-loader babel-preset-es2015 style-loader css-loader less less-loader extract-text-webpack-plugin jasmine-core karma karma-jasmine karma-chrome-launcher karma-webpack

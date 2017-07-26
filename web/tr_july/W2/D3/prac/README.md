@@ -17,3 +17,7 @@ Create a very simple TODO App:
 a) PartialRight, Curry, Reduce(coll, fn(acc, val, key), default_acc)), setSettings(key, value) <keys: a/b/c> = reducer non-mutate{} Object.assign, Promise imp
 b) Game - cross br
 jasmine test, async test, array impl, getter-setter impl
+
+http://howtodoinjava.com/scripting/javascript/jasmine-javascript-unit-testing-tutorial/
+https://evanhahn.com/how-do-i-jasmine/ 
+https://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229
