@@ -1,0 +1,21 @@
+{
+  "name": "1redux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-scripts": "^1.0.10",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6",
+    "redux-thunk": "^2.2.0"
+  }
+}

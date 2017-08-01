@@ -1,0 +1,21 @@
+npm install --save-dev babel-core babel-cli babel-preset-es2015
+npm install --save-dev mocha chai
+
+This command tells Mocha to recursively find all tests from the project and run
+them. It uses Babel to transpile ES6 code before running it.
+It'll be easier in the long run to store this command in our package.json:
+
+"scripts": {
+"test": "mocha --compilers js:babel-core/register --recursive"
+},
+
+
+Another thing we need to do is enable Babel's ES6/ES2015 language support. It's
+done by activating the babel-preset-es2015 package that we already installed.
+We just need to add a "babel" section to package.json:
+
+"babel": {
+"presets": ["es2015"]
+}
+
+npm install --save immutable
