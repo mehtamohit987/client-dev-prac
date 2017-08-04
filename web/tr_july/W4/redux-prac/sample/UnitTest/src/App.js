@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   sum(a,b){
-    return a-b;
+    return a+b;
   }
   render() {
     return (
