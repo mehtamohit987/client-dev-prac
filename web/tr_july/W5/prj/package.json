@@ -1,5 +1,5 @@
 {
-  "name": "1",
+  "name": "prj",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,10 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
-  },
-  "devDependencies": {
-    "react-scripts": "^1.0.11"
+    "hapi": "^16.5.2"
   }
 }
