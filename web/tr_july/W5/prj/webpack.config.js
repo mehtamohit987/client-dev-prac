@@ -14,14 +14,14 @@ module.exports = {
     path: path.resolve(__dirname, 'webapp/public/js/'),
     chunkFilename: "[id].[chunkhash].bundle.js"
   },
-  assets:{},
-  hot:{},
+  // assets:{},
+  // hot:{},
   devServer: {
     inline: true,
     port: 8083,
-    contentBase: './webapp/src',
+    // contentBase: path.resolve(__dirname),
     historyApiFallback: true,
-    hot: true
+    // hot: true
     },
   devtool: debug ? "inline-source-map" : "cheap-source-map",
   module: {
@@ -55,7 +55,7 @@ module.exports = {
     ]
   },
   plugins: debug ? [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: 'webapp/public/pre_compilation/index.html',
       filename: path.resolve(__dirname, 'webapp/public/index.html')
