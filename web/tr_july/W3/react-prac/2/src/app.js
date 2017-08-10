@@ -28,7 +28,7 @@ Data.propTypes = {
 
 }
 Data.defaultProps = {
-    propObject: {objectName1: "default 1", objectName2: "default 2", objectName3: "default 3"},
+    propObject: {objectName1: "default a", objectName2: "default 3", objectName3: "default 3"},
     propArray: [1,2],
     propBool: false,
     propFunc: ()=>console.log(arguments) 
