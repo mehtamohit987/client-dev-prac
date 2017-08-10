@@ -4,11 +4,15 @@ var webpack = require('webpack');
 // var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: {
-    // vendor: ['lodash',],
+  entry:[ // doesn't work with dev server
     'webpack/hot/dev-server',
-    app: './src/index.js'
-  },
+    path.join(__dirname, 'src/index.js')
+  ],
+  // {
+  //   // vendor: ['lodash',],
+  //   app: './src/index.js'
+  // }
+  // ,
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
