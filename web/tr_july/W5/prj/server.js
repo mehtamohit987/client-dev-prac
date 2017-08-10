@@ -1,5 +1,4 @@
 const Hapi = require('hapi');
-const webpackConf = require('./webpack.config.js');
 const server = new Hapi.Server();
 const Inert = require('inert');
 var Path = require('path');
@@ -15,25 +14,6 @@ server.connection({
 });
 
 server.register(Inert, () => {});
-
-// var Webpack = require('hapi-webpack');
-// server.register({
-//   register: Webpack,
-//   options: webpackConf,
-// }, {
-//   routes: {
-//     prefix: '/build',
-//   },
-// }, ()=>{
-//     server.start((err) => {
-
-//         if (err) {
-//             throw err;
-//         }
-//         console.log('Server running at:', server.info.uri);
-//     });
-
-// })
 
 server.route({  
   method: 'GET',
@@ -57,7 +37,6 @@ server.route({
   }
 })
 
-// Add the route
 server.route({
     method: 'GET',
     path:'/hello', 
@@ -65,5 +44,12 @@ server.route({
 
         return reply('hello world');
     }
+});
+
+server.start((err) => {
+    if (err) {
+        throw err;
+    }
+    console.log('Server running at:', server.info.uri);
 });
 

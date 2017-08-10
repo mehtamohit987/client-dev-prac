@@ -1,27 +1,27 @@
 var path = require('path');
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+// var ExtractTextPlugin = require("extract-text-webpack-plugin");
+// var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {
-    // vendor: ['lodash',],
-    app: path.resolve(__dirname, 'webapp/src/index.js')
-  },
+  entry: [
+    'webpack-dev-server/client?http:localhost:3001',
+    'webpack/hot/only-dev-server',
+    path.resolve(__dirname, 'webapp/src/index.js')
+  ],
   output: {
     filename: '[name]-[hash].bundle.js',
     path: path.resolve(__dirname, 'webapp/public/js/'),
     chunkFilename: "[id].[chunkhash].bundle.js"
   },
-  // assets:{},
-  // hot:{},
   devServer: {
     inline: true,
-    port: 8083,
-    // contentBase: path.resolve(__dirname),
+    port: 3001,
+    contentBase: path.resolve(__dirname, 'webapp/public'),
     historyApiFallback: true,
-    // hot: true
+    publicPath: "webapp/public/",
+    hot: true
     },
   devtool: debug ? "inline-source-map" : "cheap-source-map",
   module: {
@@ -40,7 +40,7 @@ module.exports = {
       //   test: /\.less$/,
       //   use: ExtractTextPlugin.extract({
       //     fallback: "style-loader",
-      //     use: ["css-loader", "less-loader"]
+      //     use: ["css-loader", "less-loader"]`  ``
       //   })
       // },
       {
@@ -55,11 +55,11 @@ module.exports = {
     ]
   },
   plugins: debug ? [
-    // new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'webapp/public/pre_compilation/index.html',
-      filename: path.resolve(__dirname, 'webapp/public/index.html')
-    }),
+    new webpack.HotModuleReplacementPlugin(),
+    // new HtmlWebpackPlugin({
+    //   template: 'webapp/public/pre_compilation/index.html',
+    //   filename: path.resolve(__dirname, 'webapp/public/index.html')
+    // }),
       // new webpack.optimize.CommonsChunkPlugin({
       //   name: "vendor",
       //   filename: "vendor.js",
@@ -67,16 +67,16 @@ module.exports = {
       // }),
       // new ExtractTextPlugin("styles.css"),
     ] : [
-    new HtmlWebpackPlugin({
-      template: 'webapp/public/pre_compilation/index.html',
-      filename: path.resolve(__dirname, 'webapp/public/index.html')
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: 'webapp/public/pre_compilation/index.html',
+    //   filename: path.resolve(__dirname, 'webapp/public/index.html')
+    // }),
     // new webpack.optimize.UglifyJsPlugin({ sourcemap: true,}),
     // new webpack.optimize.CommonsChunkPlugin({
     //     name: "vendor",
     //     filename: "vendor.js",
     //     minChunks: Infinity,
     // }),
-    new ExtractTextPlugin("styles.css"),
+    // new ExtractTextPlugin("styles.css"),
   ],
 };

@@ -5,7 +5,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry:[ // doesn't work with dev server
-    'webpack/hot/dev-server',
+    'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'src/index.js')
   ],
   // {
