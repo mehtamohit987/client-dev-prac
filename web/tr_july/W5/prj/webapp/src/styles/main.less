@@ -1,0 +1,39 @@
+.top-buffer { margin-top: 0.6em; }
+.col-lg-4, .col-lg-9.col-md-9{ overflow: hidden; }
+.buffer { padding: 2em 2em 2em 2em; margin-top: 4em; }
+.no-border { border: 0em; }
+.left-buffer { margin-left: 2em; margin-top: 2em; }
+.right-buffer { margin-right: 2em; margin-top: 2em;  float:right; }
+tr>td { padding-bottom: 0.4em }
+th, td, table input, table textarea { padding: 0.25em; border-spacing:0.5em; border-collapse: separate; margin: 0.25em; }
+td { text-align: center; }
+td>input { float: left; text-align: left; }
+table textarea { width: 300px }
+
+.detailModal {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+    bottom: 20%;
+    border: 1px solid #ccc;
+    background-color: color("#ffffff");
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+}
+
+.detailModalOverlay {
+    position: 'fixed';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: color("#ffffff");
+}
+
+.ReactModal__Body--open {
+    overflow: hidden;
+}

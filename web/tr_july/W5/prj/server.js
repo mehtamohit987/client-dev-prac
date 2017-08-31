@@ -1,55 +1,65 @@
-const Hapi = require('hapi');
-const server = new Hapi.Server();
-const Inert = require('inert');
-var Path = require('path');
+const Glue = require('glue');
+const serverManifest = require('./config/hapi/manifest');
 
-server.connection({ 
-    host: 'localhost', 
-    port: 8000,
-    routes: {
-        files: {
-            relativeTo: Path.join(__dirname, 'webapp/public')
+const options = {
+    relativeTo: __dirname + '/server/src',
+};
+
+const createServer = (callback) => {
+    Glue.compose(serverManifest, options, (err, server) => {
+        if (!err) {
+            server.route({
+                method: 'GET',
+                path: '/css/{file*}',
+                handler: {
+                    directory: {
+                        path: './css/',
+                    },
+                },
+            });
+            server.route({
+                method: 'GET',
+                path: '/images/{file*}',
+                handler: {
+                    directory: {
+                        path: './images/',
+                    },
+                },
+            });
+            server.route({
+                method: 'GET',
+                path: '/js/{file*}',
+                handler: {
+                    directory: {
+                        path: './js/',
+                    },
+                },
+            });
+            server.route({
+                method: 'GET',
+                path: '/{param*}',
+                handler: {
+                    file: 'index.html',
+                },
+            });
         }
-    }
-});
+        callback(err, server);
+    });
+};
 
-server.register(Inert, () => {});
-
-server.route({  
-  method: 'GET',
-  path: '/images/{file*}',
-  handler: {
-    directory: { 
-      path: 'images',
-      listing: true
-    }
-  }
-})
-
-server.route({  
-  method: 'GET',
-  path: '/js/{file*}',
-  handler: {
-    directory: { 
-      path: 'js',
-      listing: true
-    }
-  }
-})
-
-server.route({
-    method: 'GET',
-    path:'/hello', 
-    handler: function (request, reply) {
-
-        return reply('hello world');
-    }
-});
-
-server.start((err) => {
+const callback = (err, server) => {
     if (err) {
         throw err;
     }
-    console.log('Server running at:', server.info.uri);
-});
+    if (!module.parent) {
+        server.start(function(e) {
+            if (e) {
+                throw e;
+            }
 
+            // console.log('Server up.');
+        });
+    }
+};
+
+createServer(callback);

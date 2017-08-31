@@ -1,0 +1,4 @@
+export const ARTISTS_URL_RESOURCE = 'artists';
+export const ARTIST_LIST_TIMEOUT = 7000;
+export const ARTIST_DETAIL_TIMEOUT = 4000;
+export const ARTIST_DETAIL_UPDATE_TIMEOUT = 5000;

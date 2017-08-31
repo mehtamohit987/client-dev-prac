@@ -1,0 +1,37 @@
+use artists;
+db.dropDatabase();
+db.artists.insert({
+    "artist_id": 1,
+    "name": "The Script",
+    "shortDescription": "Famous Irish band", 
+    "description": "The Script are an Irish rock band formed in 2001 in Dublin, Ireland. It consists of lead vocalist and keyboardist Danny O'Donoghue, lead guitarist Mark Sheehan, and drummer Glen Power. Their album Breakeven peaked at number one in both Ireland and the UK. Their next three albums, Science & Faith (2010), #3 (2012) and No Sound Without Silence (2014), all topped the album charts in Ireland and the UK, while Science & Faith reached number three in the US. Hit singles from the albums include For the First Time, Nothing, Hall of Fame and Superheroes.",
+    "img": "/images/1.jpg"
+});
+db.artists.insert({
+    "artist_id": 2,
+    "name": "Ed Sheeran",
+    "shortDescription": "English singer-songwriter", 
+    "description": "Edward Christopher Sheeran, MBE (born 17 February 1991) is an English singer-songwriter, guitarist and record producer. He was born in Halifax, West Yorkshire, and raised in Framlingham, Suffolk. He attended the Academy of Contemporary Music in Guildford, Surrey, as an undergraduate from the age of 18 in 2009. In early 2011, Sheeran independently released the extended play, No. 5 Collaborations Project. After signing with Asylum Records, his debut album, + (read as plus), was released on 9 September 2011 and has since been certified seven-times platinum in the UK.",
+    "img": "/images/2.jpg"
+});
+db.artists.insert({
+    "artist_id": 3,
+    "name": "Luis Fonsi",
+    "shortDescription": "Puerto Rican-American singer", 
+    "description": "Luis Alfonso Rodríguez López-Cepero (born April 15, 1978), known by his stage name Luis Fonsi, is a Puerto Rican-American singer, songwriter and actor, best known for the song Despacito. Fonsi attended Florida State University School of Music on a full scholarship, majoring in Vocal Performance. He also joined the university's choir, which let him travel and perform throughout the world, and recorded demo tapes in Miami. Soon after, he was offered a recording contract by Universal Music Latin.",
+    "img": "/images/3.jpg"
+});
+db.artists.insert({
+    "artist_id": 4,
+    "name": "Eminem",
+    "shortDescription": "American rapper", 
+    "description": "Marshall Bruce Mathers III (born October 17, 1972), known professionally as Eminem (often stylized as EMINƎM), is an American rapper, record producer, and actor. Eminem is the best-selling artist of the 2000s in the United States. Throughout his career, he has had 10 number-one albums on the Billboard 200 and five number-one singles on the Billboard Hot 100. With US sales of 45.1 million albums and 42 million tracks as of June 2014, Eminem is the second best-selling male artist of the Nielsen SoundScan era, the sixth best-selling artist in the United States and the best-selling hip-hop artist.",
+    "img": "/images/4.jpg"
+});
+db.artists.insert({
+    "artist_id": 5,
+    "name": "Justin Bieber",
+    "shortDescription": "Canadian singer and songwriter", 
+    "description": "Justin Drew Bieber (/ˈbiːbər/; born March 1, 1994) is a Canadian singer and songwriter. After a talent manager discovered him through his YouTube videos covering songs in 2008 and signed to RBMG, Bieber released his debut EP, My World, in late 2009. It was certified Platinum in the U.S. He became the first artist to have seven songs from a debut record chart on the Billboard Hot 100. Bieber released his first full-length studio album, My World 2.0, in 2010. It debuted at or near number one in several countries, was certified triple Platinum in the U.S., and contained his single Baby.",
+    "img": "/images/5.jpg"
+});
